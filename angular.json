@@ -14,7 +14,10 @@
               "libs/material/tsconfig.lib.json",
               "libs/material/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/material/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/material/**"
+            ]
           }
         },
         "test": {
@@ -45,7 +48,10 @@
               "libs/core-data/tsconfig.lib.json",
               "libs/core-data/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/core-data/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/core-data/**"
+            ]
           }
         },
         "test": {
@@ -76,7 +82,10 @@
               "libs/core-state/tsconfig.lib.json",
               "libs/core-state/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/core-state/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/core-state/**"
+            ]
           }
         },
         "test": {
@@ -107,7 +116,10 @@
               "libs/ui-libraries/tsconfig.lib.json",
               "libs/ui-libraries/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/ui-libraries/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/ui-libraries/**"
+            ]
           }
         },
         "test": {
@@ -116,37 +128,6 @@
             "jestConfig": "libs/ui-libraries/jest.config.js",
             "tsConfig": "libs/ui-libraries/tsconfig.spec.json",
             "setupFile": "libs/ui-libraries/src/test-setup.ts"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
-    "theme": {
-      "projectType": "library",
-      "root": "libs/theme",
-      "sourceRoot": "libs/theme/src",
-      "prefix": "vulnerability-checker",
-      "architect": {
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/theme/tsconfig.lib.json",
-              "libs/theme/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/theme/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "libs/theme/jest.config.js",
-            "tsConfig": "libs/theme/tsconfig.spec.json",
-            "setupFile": "libs/theme/src/test-setup.ts"
           }
         }
       },
@@ -180,7 +161,9 @@
               "apps/vulnerability-checker/src/favicon.ico",
               "apps/vulnerability-checker/src/assets"
             ],
-            "styles": ["apps/vulnerability-checker/src/styles.scss"],
+            "styles": [
+              "apps/vulnerability-checker/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -239,7 +222,10 @@
               "apps/vulnerability-checker/tsconfig.app.json",
               "apps/vulnerability-checker/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/vulnerability-checker/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/vulnerability-checker/**"
+            ]
           }
         },
         "test": {
@@ -273,7 +259,9 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/vulnerability-checker-e2e/tsconfig.e2e.json"],
+            "tsConfig": [
+              "apps/vulnerability-checker-e2e/tsconfig.e2e.json"
+            ],
             "exclude": [
               "**/node_modules/**",
               "!apps/vulnerability-checker-e2e/**"
@@ -284,7 +272,8 @@
     }
   },
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
   },
   "schematics": {
     "@nrwl/angular:application": {

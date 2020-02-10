@@ -19,8 +19,7 @@
       "@gc/material": ["libs/material/src/index.ts"],
       "@gc/core-data": ["libs/core-data/src/index.ts"],
       "@gc/core-state": ["libs/core-state/src/index.ts"],
-      "@gc/ui-libraries": ["libs/ui-libraries/src/index.ts"],
-      "@gc/theme": ["libs/theme/src/index.ts"]
+      "@gc/ui-libraries": ["libs/ui-libraries/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
