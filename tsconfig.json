@@ -15,7 +15,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@vulnerability-checker/material": ["libs/material/src/index.ts"],
+      "@vulnerability-checker/core-data": ["libs/core-data/src/index.ts"],
+      "@vulnerability-checker/core-state": ["libs/core-state/src/index.ts"],
+      "@vulnerability-checker/ui-libraries": ["libs/ui-libraries/src/index.ts"],
+      "@vulnerability-checker/theme": ["libs/theme/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
