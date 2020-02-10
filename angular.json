@@ -1,129 +1,6 @@
 {
   "version": 1,
   "projects": {
-    "dashboard": {
-      "projectType": "application",
-      "schematics": {
-        "@nrwl/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "apps/dashboard",
-      "sourceRoot": "apps/dashboard/src",
-      "prefix": "vulnerability-checker",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/apps/dashboard",
-            "index": "apps/dashboard/src/index.html",
-            "main": "apps/dashboard/src/main.ts",
-            "polyfills": "apps/dashboard/src/polyfills.ts",
-            "tsConfig": "apps/dashboard/tsconfig.app.json",
-            "aot": false,
-            "assets": [
-              "apps/dashboard/src/favicon.ico",
-              "apps/dashboard/src/assets"
-            ],
-            "styles": ["apps/dashboard/src/styles.scss"],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/dashboard/src/environments/environment.ts",
-                  "with": "apps/dashboard/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
-              "namedChunks": false,
-              "aot": true,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
-                }
-              ]
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "dashboard:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "dashboard:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "dashboard:build"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "apps/dashboard/tsconfig.app.json",
-              "apps/dashboard/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!apps/dashboard/**"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "options": {
-            "jestConfig": "apps/dashboard/jest.config.js",
-            "tsConfig": "apps/dashboard/tsconfig.spec.json",
-            "setupFile": "apps/dashboard/src/test-setup.ts"
-          }
-        }
-      }
-    },
-    "dashboard-e2e": {
-      "root": "apps/dashboard-e2e",
-      "sourceRoot": "apps/dashboard-e2e/src",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/dashboard-e2e/cypress.json",
-            "tsConfig": "apps/dashboard-e2e/tsconfig.e2e.json",
-            "devServerTarget": "dashboard:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "dashboard:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": ["apps/dashboard-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/dashboard-e2e/**"]
-          }
-        }
-      }
-    },
     "material": {
       "projectType": "library",
       "root": "libs/material",
@@ -278,6 +155,132 @@
           "styleext": "scss"
         }
       }
+    },
+    "vulnerability-checker": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/vulnerability-checker",
+      "sourceRoot": "apps/vulnerability-checker/src",
+      "prefix": "gc",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/vulnerability-checker",
+            "index": "apps/vulnerability-checker/src/index.html",
+            "main": "apps/vulnerability-checker/src/main.ts",
+            "polyfills": "apps/vulnerability-checker/src/polyfills.ts",
+            "tsConfig": "apps/vulnerability-checker/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "apps/vulnerability-checker/src/favicon.ico",
+              "apps/vulnerability-checker/src/assets"
+            ],
+            "styles": ["apps/vulnerability-checker/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/vulnerability-checker/src/environments/environment.ts",
+                  "with": "apps/vulnerability-checker/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "vulnerability-checker:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "vulnerability-checker:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "vulnerability-checker:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/vulnerability-checker/tsconfig.app.json",
+              "apps/vulnerability-checker/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/vulnerability-checker/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/vulnerability-checker/jest.config.js",
+            "tsConfig": "apps/vulnerability-checker/tsconfig.spec.json",
+            "setupFile": "apps/vulnerability-checker/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "vulnerability-checker-e2e": {
+      "root": "apps/vulnerability-checker-e2e",
+      "sourceRoot": "apps/vulnerability-checker-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/vulnerability-checker-e2e/cypress.json",
+            "tsConfig": "apps/vulnerability-checker-e2e/tsconfig.e2e.json",
+            "devServerTarget": "vulnerability-checker:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "vulnerability-checker:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/vulnerability-checker-e2e/tsconfig.e2e.json"],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/vulnerability-checker-e2e/**"
+            ]
+          }
+        }
+      }
     }
   },
   "cli": {
@@ -292,5 +295,5 @@
       "unitTestRunner": "jest"
     }
   },
-  "defaultProject": "dashboard"
+  "defaultProject": "vulnerability-checker"
 }

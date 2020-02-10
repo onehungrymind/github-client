@@ -1,5 +1,5 @@
 {
-  "npmScope": "vulnerability-checker",
+  "npmScope": "gc",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": {
@@ -11,13 +11,6 @@
     "nx.json": "*"
   },
   "projects": {
-    "dashboard": {
-      "tags": []
-    },
-    "dashboard-e2e": {
-      "tags": [],
-      "implicitDependencies": ["dashboard"]
-    },
     "material": {
       "tags": []
     },
@@ -32,6 +25,13 @@
     },
     "theme": {
       "tags": []
+    },
+    "vulnerability-checker": {
+      "tags": []
+    },
+    "vulnerability-checker-e2e": {
+      "tags": [],
+      "implicitDependencies": ["vulnerability-checker"]
     }
   }
 }
