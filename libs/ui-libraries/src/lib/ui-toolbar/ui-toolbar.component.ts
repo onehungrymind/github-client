@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'vulnerability-checker-ui-toolbar',
+  selector: 'gc-ui-toolbar',
   templateUrl: './ui-toolbar.component.html',
   styleUrls: ['./ui-toolbar.component.scss'],
   encapsulation: ViewEncapsulation.None

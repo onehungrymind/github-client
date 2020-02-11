@@ -2008,6 +2008,11 @@ bonjour@^3.5.0:
     multicast-dns "^6.0.1"
     multicast-dns-service-types "^1.1.0"
 
+bootstrap-4-grid@^3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/bootstrap-4-grid/-/bootstrap-4-grid-3.3.0.tgz#35827f8609fd544c360cdce6bb883d873647f071"
+  integrity sha512-WTpT1ZqiDPQKC84vYmKfVDbHNqRHsuEBjGmhg8BXPHJDCI7Wou2/RZ/VEgdg5KjEnaeu49aU1toYOIrDvNnfZA==
+
 bootstrap-utilities@^4.1.3:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/bootstrap-utilities/-/bootstrap-utilities-4.1.3.tgz#3570692f7c5d1fbd66746370ff4a353da04d1250"
