@@ -1,38 +1,37 @@
 import gql from 'graphql-tag';
 
-export interface RepositoriesType {
-  allrepos: Repository[];
-  notfixed: Repository[];
-}
-
-export interface Repository {
-  name: string,
-  url: string,
-    vulnerabilityAlerts: {
-      totalCount: number
-  }
-}
-
-export const vulFragment = gql`
-  fragment vulFragment on Repository {
+const repositoryFragment = gql`
+  fragment repositoryFragment on Repository {
+    id
     name
+    description
+    homepageUrl
     url
-    vulnerabilityAlerts(first: 100) {
-      totalCount
-    }
-  }
-`
-
-export const vulQuery = gql`
-  query vulQuery {
-  organization(login: "onehungrymind") {
-    repositories(last: 100) {
-      totalCount
+    forkCount
+    isPrivate
+    isFork
+    languages(first: 1) {
       nodes {
-        ...vulFragment
+        name
+        color
+        id
+      }
+    }
+    createdAt
+    updatedAt
+    pushedAt
+  }
+`;
+
+export const repositoriesQuery = gql`
+  query repositoriesQuery($login: String!) {
+    user(login: $login) {
+      repositories(first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
+        nodes {
+          ...repositoryFragment
+        }
       }
     }
   }
-}
-${vulFragment}
-`
+  ${repositoryFragment}
+`;

@@ -1,31 +1,31 @@
-import { vulQuery } from './repositories.graphql';
+
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
-import { RepositoriesType } from './repositories.graphql';
-import { map } from 'rxjs/operators'
-import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { ApolloQueryResult } from 'apollo-client';
+import { UserService } from '../user/user.service';
+import { repositoriesQuery } from './repositories.graphql';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RepositoriesService {
-  public vulnerabilities: RepositoriesType[];
 
   constructor(
-    private apollo: Apollo
+    private apollo: Apollo,
+    private userService: UserService
   ) { }
 
-  all(): Observable<any> {
-    return this.apollo.query({
-      query: vulQuery,
-      fetchPolicy: 'network-only'
-    })
-      .pipe(
-        map(
-          (res: ApolloQueryResult<any>) =>
-            res.data.organization.repositories.nodes
-        )
-      )
+  all() {
+    const login = this.userService.getUsername();
+    return this.apollo.mutate({
+      mutation: repositoriesQuery,
+      variables: {
+        login
+      }
+    }).pipe(
+      map((response: ApolloQueryResult<any>) => response.data.user.repositories.nodes),
+      map((repositories: any[]) => repositories.map((repo) => ({ ...repo, languages: repo.languages.nodes[0] })))
+    )
   }
 }
