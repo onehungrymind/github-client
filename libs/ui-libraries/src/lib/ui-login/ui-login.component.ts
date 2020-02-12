@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-// import { githubConfig } from '../../../../../.env';
+import { githubConfig } from '../../../../../.env'
 
 @Component({
   selector: 'vulnerability-checker-ui-login',
@@ -10,6 +10,6 @@ import { Component } from '@angular/core';
 export class UiLoginComponent {
 
   loginWithGitHub() {
-    // window.location.href = `https://github.com/login/oauth/authorize?client_id=${githubConfig.client_id}&scope=user,public_repo,repo&redirect_uri=${window.location.href}/callback`;
+    window.location.href = `https://github.com/login/oauth/authorize?client_id=${githubConfig.client_id}&scope=user,public_repo,repo&redirect_uri=${window.location.href}/callback`;
   }
 }
