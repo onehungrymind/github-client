@@ -28,10 +28,9 @@ export class AuthService {
     );
   }
 
-  // TOKEN
   setToken(token) {
     localStorage.setItem(TOKEN_NAME, token);
-    this.isAuthenticated$.next(token !== '' || token !== null || token !== undefined); // Could be more Robust
+    this.isAuthenticated$.next(token !== '' || token !== null || token !== undefined);
   }
 
   getToken() {
