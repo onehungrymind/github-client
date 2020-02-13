@@ -1,0 +1,36 @@
+@import 'libs/theme/theme.scss';
+@import 'bootstrap-utilities';
+@import 'bootstrap-4-grid';
+
+.test {
+    background-color: #F8FAFC;
+    padding-left: 0px;
+    padding-right: 50px;
+    font-family: $font-family;
+    color: $text-base;
+}
+
+.profile {
+    border-bottom: 1px;
+    border-color: $accent;
+    vertical-align: middle;
+    height: 300px;
+    padding-left: 5px;
+    .pic {
+        margin-top: 5px;
+        border-radius: 3px;
+        height: 200px;
+        width: 200px;
+        background-color: $primary;
+    }
+}
+
+.user-info {
+    height: 200px;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.repo-info {
+    height: 200px;
+}
