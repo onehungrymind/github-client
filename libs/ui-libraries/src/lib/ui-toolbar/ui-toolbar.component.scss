@@ -1,6 +1,7 @@
 @import 'libs/theme/theme.scss';
 @import 'bootstrap-utilities';
 @import 'bootstrap-4-grid';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Material+Icons&display=swap');
 
 .toolbar {
   background-color: $background;
@@ -11,7 +12,6 @@
 .logo {
   margin-left: 20px;
   img {
-    background-color: white;
     border-radius: 2em;
     vertical-align: middle;
     width: 50px;
@@ -38,7 +38,7 @@
     background: #5b5b5b8b;
     border-radius: 2px;
     border: 1px solid #707070;
-    height: 22px;
+    height: 35px;
     padding: 5px;
     padding-left: 15px;
   }
