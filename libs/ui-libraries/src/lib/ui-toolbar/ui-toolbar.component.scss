@@ -3,7 +3,7 @@
 @import 'libs/theme/_variables.scss';
 
 .toolbar {
-  height: 115px !important;
+  height: 64px !important;
   background-color: $background;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14);
 }
@@ -11,36 +11,39 @@
 .logo {
   img {
     vertical-align: middle;
-    width: 81px;
+    width: 50px;
     height: auto;
   }
 }
 
 .mat-form-field-infix {
-  width: 567px !important;
+  width: 343px !important;
 }
 
 .username {
-  h3 {
-    font-size: 36px;
-  }
+  font-size: 22px;
 }
 
 .search {
   margin-top: 0.63em;
   .input {
-    font-size: 24px;
+    font-size: 16px;
     background-color: #5B5B5B8B;
     border-radius: 7px;
     border: 1px solid #707070;
-    height: 57px;
-    padding: 5px;
+    color: white;
+    height: 37px;
+    padding: 5px 5px 5px 15px;
   }
 }
 
 .input::placeholder {
   color: $text-dark;
-  padding-left: 28px;
+}
+
+.input:focus {
+  background-color: white;
+  color: black;
 }
 
 .spacer {
