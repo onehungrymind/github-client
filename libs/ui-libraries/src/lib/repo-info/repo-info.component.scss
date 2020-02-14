@@ -1,36 +1,39 @@
 @import 'libs/theme/theme.scss';
-@import 'bootstrap-utilities';
-@import 'bootstrap-4-grid';
+@import 'libs/theme/main.scss';
 
-.test {
-    background-color: #F8FAFC;
-    padding-left: 0px;
-    padding-right: 50px;
+.info-sidebar {
+    margin-left: 132px !important;
     font-family: $font-family;
     color: $text-base;
 }
 
-.profile {
-    border-bottom: 1px;
-    border-color: $accent;
-    vertical-align: middle;
-    height: 300px;
-    padding-left: 5px;
-    .pic {
-        margin-top: 5px;
-        border-radius: 3px;
-        height: 200px;
-        width: 200px;
-        background-color: $primary;
+.real-name {
+    font-size: 34px;
+    color: #5B5B5B;
+}
+
+.display-name {
+    color: #5B5B5BB2;
+    font-size: 34px;
+}
+
+.job-title {
+    color: #5B5B5BC1;
+}
+
+.pic {
+    img {
+        border-radius: 5px;
+        max-width: 260px;
+        max-height: 260px;
+        width: 100%;
+        height: 100%;
+        border: 2px solid #707070;
+        object-fit: cover;
     }
 }
 
 .user-info {
-    height: 200px;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: 100;
-}
-
-.repo-info {
-    height: 200px;
 }
