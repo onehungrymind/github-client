@@ -1,32 +1,31 @@
-<div class="ml-5justify-content-start h-100 col-2 flex-column d-flex info-sidebar pr-5  border-right">
+<div class="user-container ml-5 justify-content-start h-100 col-2 flex-column d-flex  border-right">
+    <div class="user-container__wrapper">
+        <div class="mt-4 d-flex flex-column w-100">
 
+            <img loading="lazy" class="user-container__image" src="assets/icons/guy.jpeg">
 
-    <div class="profile mt-4 d-flex flex-column w-100 border-bottom">
-
-        <div class="pic">
-            <img src="assets/icons/guy.jpeg">
+            <div class="d-flex justify-content-between ml-1">
+                <p class="user-container__name font-weight-bold my-2 mr-0">John Doe</p>
+                <button mat-icon-button class="align-self-center">
+                    <mat-icon class="align-self-center">create</mat-icon>
+                </button>
+            </div>
+            <p class="user-container__user-name mat-h3 ml-1">jDizzle</p>
         </div>
 
-        <div class="d-flex justify-content-between ml-1">
-            <h3 class="real-name mat-h3 font-weight-bold mt-3 mr-0">John Doe</h3>
-            <button mat-icon-button class="align-self-center">
-                <mat-icon class="align-self-center">create</mat-icon>
-            </button>
+        <div class="border-bottom"></div>
+
+        <div class="d-flex flex-column ml-1">
+            <p class="user-container__info my-2">Peoria, AZ</p>
+            <p class="user-container__info my-2">john@doe.com</p>
+            <p class="user-container__info my-2">https://jdizzy.com</p>
         </div>
 
-        <h3 class="display-name mat-h3 ml-1 font-weight-normal">jDizzle</h3>
+        <div class="border-bottom"></div>
 
+        <div class="d-flex flex-column mt-3">
+            <p class="user-container__agency ml-1 m-0">Company Name</p>
+            <p class="user-container__occupancy m-0 ml-1">Software Engineer</p>
+        </div>
     </div>
-
-    <div class="user-info d-flex flex-column border-bottom">
-        <p class="user-address mat-h1 ml-1 font-weight-normal mt-3 mb-2">Peoria, AZ</p>
-        <p class="user-email mat-h1 ml-1 font-weight-normal mt-2 mb-2">john@doe.com</p>
-        <p class="user-website mat-h1 ml-1 font-weight-normal mt-2 mb-3">https://jdizzy.com</p>
-    </div>
-
-    <div class="d-flex flex-column">
-        <h3 class="company-name mat-h1 ml-1 mt-3 font-weight-normal">Company Name</h3>
-        <h3 class="job-title mat-h1 ml-1 font-weight-normal">Software Engineer</h3>
-    </div>
-
 </div>
