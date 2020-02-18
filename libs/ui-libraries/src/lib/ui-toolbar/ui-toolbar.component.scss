@@ -1,51 +1,49 @@
 @import 'libs/theme/theme.scss';
-@import 'bootstrap-utilities';
-@import 'bootstrap-4-grid';
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i|Material+Icons&display=swap');
+@import 'libs/theme/main.scss';
+@import 'libs/theme/_variables.scss';
 
 .toolbar {
+  height: 64px !important;
   background-color: $background;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14);
 }
 
 .logo {
-  margin-left: 20px;
   img {
-    border-radius: 2em;
     vertical-align: middle;
     width: 50px;
     height: auto;
   }
 }
 
-.search {
-  margin-left: 30px;
-  align-self: center;
+.mat-form-field-infix {
+  width: 343px !important;
 }
 
-.mat-form-field-infix {
-  width: 400px !important;
+.username {
+  font-size: 22px;
 }
 
 .search {
   margin-top: 0.63em;
   .input {
-    opacity: 0.75;
-    width: 400px;
-    font-size: 13px;
-    color: #9B9C9B;
-    background: #5b5b5b8b;
-    border-radius: 2px;
+    font-size: 16px;
+    background-color: #5B5B5B8B;
+    border-radius: 7px;
     border: 1px solid #707070;
-    height: 35px;
-    padding: 5px;
-    padding-left: 15px;
+    color: white;
+    height: 37px;
+    padding: 5px 5px 5px 15px;
   }
 }
 
 .input::placeholder {
-  color: #9B9C9B;
+  color: $text-dark;
+}
+
+.input:focus {
+  background-color: white;
+  color: black;
 }
 
 .spacer {
