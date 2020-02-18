@@ -21,7 +21,11 @@ export class AuthService {
   }
 
   handleRedirectCallback(code: string) {
+<<<<<<< HEAD
     const loginURL = `https://gh-auth-server.herokuapp.com/authenticate/${code}`;
+=======
+    const loginURL = `https://github-no-cors-client.herokuapp.com/authenticate/${code}`;
+>>>>>>> f229dfa8b73a63967af4e56cd37758e6bac5a3d9
     return this.http.get(loginURL).pipe(
       tap((res: {token: string}) => this.setToken(res.token)),
       tap(() => this.router.navigate(['']))
