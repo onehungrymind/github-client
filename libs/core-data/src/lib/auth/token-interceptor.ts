@@ -30,7 +30,6 @@ export class TokenInterceptor implements HttpInterceptor {
       tap(() => {}, (error: HttpErrorResponse) => this.handleUnAuth(error))
     );
   }
-<<<<<<< HEAD
 
   handleUnAuth(error: HttpErrorResponse) {
     if (error.status === 401) {
@@ -38,12 +37,4 @@ export class TokenInterceptor implements HttpInterceptor {
     }
   }
 
-=======
-
-  handleUnAuth(error: HttpErrorResponse) {
-    if (error.status === 401) {
-      this.router.navigate(['login']);
-    }
-  }
->>>>>>> f229dfa8b73a63967af4e56cd37758e6bac5a3d9
 }
