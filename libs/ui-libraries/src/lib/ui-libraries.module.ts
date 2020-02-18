@@ -6,6 +6,7 @@ import { UiLoginComponent } from './ui-login/ui-login.component';
 import { CallbackComponent } from './callback/callback.component';
 import { RouterModule } from '@angular/router';
 import { CoreDataModule } from '@gc/core-data';
+import { RepoInfoComponent } from './repo-info/repo-info.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import { CoreDataModule } from '@gc/core-data';
     RouterModule,
     CoreDataModule
   ],
-  declarations: [UiToolbarComponent, UiLoginComponent, CallbackComponent],
-  exports: [UiToolbarComponent]
+  declarations: [UiToolbarComponent, UiLoginComponent, CallbackComponent, RepoInfoComponent],
+  exports: [UiToolbarComponent, RepoInfoComponent]
 })
 export class UiLibrariesModule {}
