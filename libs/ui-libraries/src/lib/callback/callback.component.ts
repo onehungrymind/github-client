@@ -5,8 +5,8 @@ import { AuthService } from '@gc/core-data'
 
 @Component({
   selector: 'gc-callback',
-  templateUrl: './callback.component.html',
-  styleUrls: ['./callback.component.scss']
+  template: '',
+  styleUrls: []
 })
 export class CallbackComponent implements OnInit {
 
@@ -19,5 +19,4 @@ export class CallbackComponent implements OnInit {
     const code = this.route.snapshot.queryParams.code;
     this.authService.handleRedirectCallback(code);
   }
-
 }
