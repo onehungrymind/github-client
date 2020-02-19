@@ -6,7 +6,7 @@ import { AuthService } from '@gc/core-data'
 @Component({
   selector: 'gc-callback',
   template: '',
-  styleUrls: []
+  styles: []
 })
 export class CallbackComponent implements OnInit {
 
