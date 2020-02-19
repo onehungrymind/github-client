@@ -1,6 +1,5 @@
 @import '~@angular/material/theming';
-
-@include mat-core();
+@import './variables';
 
 $mat-primary: (
   50: #5a6672,
@@ -72,5 +71,11 @@ $custom-theme-primary: mat-palette($mat-primary);
 $custom-theme-accent: mat-palette($mat-accent);
 
 $custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent);
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Montserrat, Helvetica Neue, sans-serif'
+);
+
+@include mat-core($custom-typography);
 
 @include angular-material-theme($custom-theme);

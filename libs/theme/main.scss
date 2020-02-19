@@ -1,0 +1,18 @@
+// Third Party Styles
+@import 'bootstrap-utilities';
+@import 'bootstrap-4-grid';
+
+// Partial Styles
+@import './fonts';
+@import './variables';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  color: $text-base !important;
+}
