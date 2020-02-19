@@ -4,13 +4,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "vulnerabilityChecker",
+      "gc",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "vulnerability-checker",
+      "gc",
       "kebab-case"
     ]
   }

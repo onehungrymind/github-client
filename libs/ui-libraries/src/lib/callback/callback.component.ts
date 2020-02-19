@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { AuthService } from '@gc/core-data'
 
 @Component({
-  selector: 'vulnerability-checker-callback',
+  selector: 'gc-callback',
   templateUrl: './callback.component.html',
   styleUrls: ['./callback.component.scss']
 })

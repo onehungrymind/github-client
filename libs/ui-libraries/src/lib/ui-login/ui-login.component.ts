@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { githubConfig } from '../../../../../.env'
 
 @Component({
-  selector: 'vulnerability-checker-ui-login',
+  selector: 'gc-ui-login',
   templateUrl: './ui-login.component.html',
   styleUrls: ['./ui-login.component.scss']
 })

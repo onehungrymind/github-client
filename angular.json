@@ -5,7 +5,7 @@
       "projectType": "library",
       "root": "libs/material",
       "sourceRoot": "libs/material/src",
-      "prefix": "vulnerability-checker",
+      "prefix": "gc",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -39,7 +39,7 @@
       "projectType": "library",
       "root": "libs/core-data",
       "sourceRoot": "libs/core-data/src",
-      "prefix": "vulnerability-checker",
+      "prefix": "gc",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -73,7 +73,7 @@
       "projectType": "library",
       "root": "libs/core-state",
       "sourceRoot": "libs/core-state/src",
-      "prefix": "vulnerability-checker",
+      "prefix": "gc",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
@@ -107,7 +107,7 @@
       "projectType": "library",
       "root": "libs/ui-libraries",
       "sourceRoot": "libs/ui-libraries/src",
-      "prefix": "vulnerability-checker",
+      "prefix": "gc",
       "architect": {
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
