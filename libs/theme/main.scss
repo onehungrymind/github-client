@@ -3,9 +3,10 @@
 @import 'bootstrap-4-grid';
 
 // Partial Styles
-@import './fonts';
-@import './utilities';
-@import './variables';
+@import 'fonts';
+@import 'theme';
+@import 'utilities';
+@import 'variables';
 
 html,
 body {

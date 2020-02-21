@@ -18,6 +18,7 @@
 .bg-primary { background-color: $primary !important; }
 .bg-accent { background-color: $accent !important; }
 .bg-warn { background-color: $warn !important; }
+.default-bg { background-color: $background !important;}
 
 // NOTE: We are currently using the `bootstrap-utilities` package.
 // NOTE: This unfortunately does not give us access to Bootstraps variables to overwrite the theme colors.
