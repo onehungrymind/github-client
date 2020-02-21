@@ -9,17 +9,14 @@
 // Text Color
 .text-primary { color: $primary !important; }
 .text-accent { color: $accent !important; }
-.text-secondary { color: $secondary !important; }
 .text-warn { color: $warn !important; }
 .text-base { color: $text-base !important; }
 .text-light { color: $text-light !important; }
-.text-medium { color: $text-medium !important; }
 .text-dark { color: $text-dark !important; }
 
 // Background Color
 .bg-primary { background-color: $primary !important; }
 .bg-accent { background-color: $accent !important; }
-.bg-secondary { background-color: $secondary !important; }
 .bg-warn { background-color: $warn !important; }
 
 // NOTE: We are currently using the `bootstrap-utilities` package.
