@@ -1,10 +1,7 @@
-@import 'libs/theme/theme.scss';
 @import 'libs/theme/main.scss';
-@import 'libs/theme/_variables.scss';
 
 .toolbar {
   height: 64px !important;
-  background-color: $background;
   box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14);
 }
 
@@ -35,10 +32,6 @@
     height: 37px;
     padding: 5px 5px 5px 15px;
   }
-}
-
-.input::placeholder {
-  color: $text-dark;
 }
 
 .input:focus {
