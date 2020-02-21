@@ -1,0 +1,28 @@
+@import "variables";
+
+// All utilities should have "!important"
+
+// -----------------------------------------
+// Overwrite Bootstrap Classes
+// -----------------------------------------
+
+// Text Color
+.text-primary { color: $primary !important; }
+.text-accent { color: $accent !important; }
+.text-secondary { color: $secondary !important; }
+.text-warn { color: $warn !important; }
+.text-base { color: $text-base !important; }
+.text-light { color: $text-light !important; }
+.text-medium { color: $text-medium !important; }
+.text-dark { color: $text-dark !important; }
+
+// Background Color
+.bg-primary { background-color: $primary !important; }
+.bg-accent { background-color: $accent !important; }
+.bg-secondary { background-color: $secondary !important; }
+.bg-warn { background-color: $warn !important; }
+
+// NOTE: We are currently using the `bootstrap-utilities` package.
+// NOTE: This unfortunately does not give us access to Bootstraps variables to overwrite the theme colors.
+// NOTE: Because of that, we now have to manually intercept the classes and change the colors.
+// NOTE: Also, not all classes above are specific to Bootstrap.

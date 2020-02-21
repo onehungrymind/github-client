@@ -162,7 +162,8 @@
               "apps/vulnerability-checker/src/assets"
             ],
             "styles": [
-              "apps/vulnerability-checker/src/styles.scss"
+              "apps/vulnerability-checker/src/styles.scss",
+              "libs/theme/theme.scss"
             ],
             "scripts": []
           },
