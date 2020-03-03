@@ -17,8 +17,6 @@ export class CallbackComponent implements OnInit {
 
   ngOnInit() {
     const code = this.route.snapshot.queryParams.code;
-    // this.authService.handleRedirectCallback(code);
-    this.authService.getAccessToken(code);
-    console.log(code, 'this is in the callback component');
+    this.authService.handleRedirectCallback(code);
   }
 }

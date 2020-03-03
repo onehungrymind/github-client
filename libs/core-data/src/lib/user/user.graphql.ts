@@ -22,7 +22,7 @@ export const getUsernameQuery = gql`
 
 export const usersQuery = gql`
   query usersQuery($login: String!) {
-    user(login: $login) {
+    user(login: "elideg") {
       ...userFragment
     }
   }
