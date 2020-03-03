@@ -1,31 +1,29 @@
-
 import { Injectable } from '@angular/core';
 import { Apollo } from 'apollo-angular';
-import { map, tap } from 'rxjs/operators';
+import { tap, map } from 'rxjs/operators';
 import { ApolloQueryResult } from 'apollo-client';
 import { UserService } from '../user/user.service';
-import { repositoriesQuery } from './repositories.graphql';
+import { organizationQuery } from './organizations.graphql';
 
 @Injectable({
   providedIn: 'root'
 })
-export class RepositoriesService {
+export class OrganizationsService {
 
   constructor(
     private apollo: Apollo,
     private userService: UserService
-  ) { }
+  ) {}
 
   all() {
     const login = this.userService.getUsername();
     return this.apollo.mutate({
-      mutation: repositoriesQuery,
+      mutation: organizationQuery,
       variables: {
         login
       }
     }).pipe(
-      map((response: ApolloQueryResult<any>) => response.data.user.repositories.nodes),
-      map((repositories: any[]) => repositories.map((repo) => ({ ...repo, languages: repo.languages.nodes[0] })))
+      tap((response: any) => console.log(response))
     )
   }
 }

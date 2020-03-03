@@ -201,7 +201,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "vulnerability-checker:build"
+            "browserTarget": "vulnerability-checker:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {

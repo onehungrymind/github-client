@@ -10,6 +10,6 @@ import { githubConfig } from '../../../../../.env'
 export class UiLoginComponent {
 
   loginWithGitHub() {
-    window.location.href = `https://github.com/login/oauth/authorize?client_id=${githubConfig.client_id}&scope=user,public_repo,repo&redirect_uri=${window.location.origin}/callback`;
+    return window.location.href = `https://github.com/login/oauth/authorize?client_id=${githubConfig.client_id}&scope=user,public_repo,repo&redirect_uri=${window.location.origin}/callback`;
   }
 }

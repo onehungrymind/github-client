@@ -29,9 +29,9 @@ export const repositoriesQuery = gql`
       repositories(first: 100, orderBy: {field: CREATED_AT, direction: DESC}) {
         nodes {
           ...repositoryFragment
-        }
       }
     }
   }
-  ${repositoryFragment}
+}
+${repositoryFragment}
 `;
