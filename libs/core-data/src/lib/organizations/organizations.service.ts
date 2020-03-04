@@ -18,8 +18,9 @@ export class OrganizationsService {
   all() {
     const login = this.userService.getUsername();
     console.log(login);
-    return this.apollo.mutate({
-      mutation: organizationQuery,
+    return this.apollo.query({
+      query: organizationQuery,
+      fetchPolicy: 'network-only',
       variables: {
         login
       }
