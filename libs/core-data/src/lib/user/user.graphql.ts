@@ -2,13 +2,15 @@ import gql from 'graphql-tag';
 
 const userFragment = gql`
   fragment userFragment on User {
-    id
     avatarUrl
+    id
     name
     login
-    url
-    email
     bio
+    location
+    email
+    websiteUrl
+    company
   }
 `;
 

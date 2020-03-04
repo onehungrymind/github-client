@@ -1,19 +1,23 @@
 export interface User {
-  id: string;
-  avatarUrl: string;
-  name: string;
-  login: string;
-  url: string;
-  email: string;
-  bio: string;
+  avatarUrl: string
+  id: string
+  name: string
+  login: string
+  bio: string
+  location: string
+  email: string
+  websiteUrl: string
+  company: string
 }
 
 export const emptyUser: User = {
-  id: null,
   avatarUrl: '',
+  id: null,
   name: '',
   login: '',
-  url: '',
+  bio: '',
+  location: '',
   email: '',
-  bio: ''
+  websiteUrl: '',
+  company: ''
 }
