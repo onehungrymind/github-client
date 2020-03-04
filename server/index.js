@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 const queryString = require('query-string');
 
-const accessTokenURL = (code) => `https://github.com/login/oauth/access_token?code=${code}&client_secret=d69b43757cfbbf05db995eb4a540c654a91d9a79&client_id=462d5714bbdb3c9ace6c&redirect_uri=http://localhost:4200/callback`;
+const accessTokenURL = (code) => `https://github.com/login/oauth/access_token?code=${code}&client_secret=${githubConfig.client_id}&client_id=${githubConfig.client_secret}&redirect_uri=http://localhost:4200/callback`;
 
 app.use(cors())
 app.options('*', cors());
