@@ -29,6 +29,9 @@
     "vulnerability-checker-e2e": {
       "tags": [],
       "implicitDependencies": ["vulnerability-checker"]
+    },
+    "github-server": {
+      "tags": []
     }
   }
 }

@@ -24,13 +24,12 @@ export class AuthService {
     this.setToken(this.getToken());
   }
 
-  handleRedirectCallback(code: string) {
+  handleRedirectCallback$(code: string) {
     const params = new HttpParams().set('code', code);
-    const accessURL = `http://localhost:3000`;
-    this.http.get(accessURL, { params }).pipe(
+    return this.http.post('http://localhost:3333/api/auth/', {}, { params }).pipe(
       tap((res: any) => this.setToken(res.access_token)),
       tap(() => this.router.navigate(['']))
-    ).subscribe();
+    );
   }
 
   setToken(token) {
