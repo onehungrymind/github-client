@@ -28,7 +28,7 @@ export class AuthService {
     const params = new HttpParams().set('code', code);
     const accessURL = `http://localhost:3000`;
     this.http.get(accessURL, { params }).pipe(
-      tap(({ access_token }) => this.setToken(access_token)),
+      tap((res: any) => this.setToken(res.access_token)),
       tap(() => this.router.navigate(['']))
     ).subscribe();
   }

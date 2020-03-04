@@ -17,6 +17,7 @@ export class OrganizationsService {
 
   all() {
     const login = this.userService.getUsername();
+    console.log(login);
     return this.apollo.mutate({
       mutation: organizationQuery,
       variables: {

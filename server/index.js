@@ -16,7 +16,6 @@ app.get('/', async (req, res) => {
     const queryAccessToken = await axios.get(accessTokenURL(gitHubCode));
     const parseData = queryString.parse(queryAccessToken.data);
     const access_token = parseData.access_token;
-
     res.send({ access_token });
   } catch (err) {
     console.log('Error inside the middleware', err)

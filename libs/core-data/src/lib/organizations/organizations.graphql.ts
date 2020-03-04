@@ -9,8 +9,8 @@ const organizationFragment = gql`
         vulnerabilityAlerts(first: 10) {
           nodes {
             repository {
-              name
               description
+              name
           }
         }
       }
@@ -21,12 +21,14 @@ const organizationFragment = gql`
 
 export const organizationQuery = gql`
   query organizationQuery($login: String!) {
-    user(login: $login)
+    user(login: $login) {
+      login
       organizations(first: 10) {
         nodes {
           ...organizationFragment
       }
     }
   }
+}
 ${organizationFragment}
 `;
